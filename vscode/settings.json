@@ -1,0 +1,135 @@
+{
+   "vim.leader": ";",
+   "vim.useSystemClipboard": true,
+   "vim.hlsearch": true,
+   "vim.handleKeys": {
+     "<C-a>": false
+   },
+   "vim.insertModeKeyBindings": [
+      {
+        "before": ["j", "j"],
+        "after": ["<Esc>"]
+      }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+      {
+        "before": ["Z", "Z"],
+        "commands": [":wq"]
+      },
+      {
+        "before": ["Z", "Q"],
+        "commands": [":q"]
+      },
+      {
+        "before": [";", "'"],
+        "commands": ["workbench.action.quickOpen"]
+      },
+      {
+        "before": ["'", ";"],
+        "commands": ["workbench.action.closeActiveEditor"]
+      },
+      {
+        "before": ["<leader>", "d"],
+        "after": ["d", "d"]
+      },
+      {
+        "before": ["<C-n>"],
+        "commands": [":tabn"]
+      },
+      {
+        "before": ["<C-p>"],
+        "commands": [":tabN"]
+      },
+      {
+        "before": ["/", "/"],
+        "commands": [":noh"]
+      }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+      {
+        "before": [ "p", ],
+        "after": [ "p", "g", "v", "y" ]
+      },
+      {
+        "before": [ ">" ],
+        "commands": [ "editor.action.indentLines" ]
+      },
+      {
+        "before": [ "<" ],
+        "commands": [ "editor.action.outdentLines" ]
+      },
+    ],
+    "settings.cycle": [
+      {
+        "id": "statusBar",
+        "overrideWorkspaceSettings": true,
+        "values":[
+            {
+                "workbench.statusBar.visible": true
+            },
+            {
+                "workbench.statusBar.visible": false
+            }
+         ]
+      },
+      {
+        "id": "miniMap",
+        "overrideWorkspaceSettings": true,
+        "values":[
+            {
+                "editor.minimap.enabled": true
+            },
+            {
+                "editor.minimap.enabled": false
+            }
+         ]
+      },
+      {
+        "id": "lineNumbers",
+        "overrideWorkspaceSettings": false,
+        "values":[
+            {
+                "editor.lineNumbers": "off",
+                "editor.folding": false,
+                "editor.glyphMargin": false
+            },
+            {
+                "editor.lineNumbers": "on",
+                "editor.folding": true,
+                "editor.glyphMargin": true
+
+            }
+         ]
+      },
+      {
+        "id": "colorTheme",
+        "overrideWorkspaceSettings": false,
+        "values":[
+            {
+              "workbench.colorTheme": "Default Dark+"
+            },
+            {
+              "workbench.colorTheme": "Default Light+"
+            }
+         ]
+      }
+    ],
+    "editor.minimap.enabled": false,
+    "workbench.statusBar.visible": true,
+    "editor.lineNumbers": "on",
+    "editor.folding": true,
+    "editor.glyphMargin": true,
+    "workbench.iconTheme": "vscode-icons",
+    "window.zoomLevel": 0,
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.colorTheme": "Better Solarized Dark",
+    "editor.mouseWheelZoom": true,
+    "editor.accessibilitySupport": "off",
+    "vsicons.dontShowNewVersionMessage": true,
+    "files.autoSave": "afterDelay",
+    "typescript.updateImportsOnFileMove.enabled": "always"
+}
