@@ -1,4 +1,10 @@
 {
+  "terminal.integrated.shellArgs.linux": [
+    "-i"
+  ],
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
    "vim.leader": ";",
    "vim.useSystemClipboard": true,
    "vim.hlsearch": true,
@@ -114,13 +120,13 @@
          ]
       }
     ],
-    "editor.minimap.enabled": false,
+    "editor.minimap.enabled": true,
     "workbench.statusBar.visible": true,
     "editor.lineNumbers": "on",
     "editor.folding": true,
     "editor.glyphMargin": true,
     "workbench.iconTheme": "vscode-icons",
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 2,
     "editor.fontLigatures": true,
     "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
     "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
@@ -131,5 +137,6 @@
     "editor.accessibilitySupport": "off",
     "vsicons.dontShowNewVersionMessage": true,
     "files.autoSave": "afterDelay",
-    "typescript.updateImportsOnFileMove.enabled": "always"
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "explorer.confirmDelete": false
 }
