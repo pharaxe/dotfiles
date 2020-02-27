@@ -114,22 +114,33 @@
          ]
       }
     ],
-    "editor.minimap.enabled": false,
+    "editor.minimap.enabled": true,
     "workbench.statusBar.visible": true,
     "editor.lineNumbers": "on",
     "editor.folding": true,
     "editor.glyphMargin": true,
     "workbench.iconTheme": "vscode-icons",
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 4,
     "editor.fontLigatures": true,
-    "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
-    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
-    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+    "editor.fontFamily": "Fira Code",
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.colorTheme": "Better Solarized Dark",
+    "workbench.colorCustomizations": {
+      // Better Solarized Dark uses a way too bright red for the cursor.
+      "[Better Solarized Dark]": {
+        "editorCursor.foreground": "#839496", 
+        "editorCursor.background": "#003541"
+      }
+    },
     "editor.mouseWheelZoom": true,
     "editor.accessibilitySupport": "off",
     "vsicons.dontShowNewVersionMessage": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "workbench.editor.showTabs": false,
     "files.autoSave": "afterDelay",
-    "typescript.updateImportsOnFileMove.enabled": "always"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
 }
