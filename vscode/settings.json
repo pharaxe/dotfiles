@@ -3,7 +3,9 @@
    "vim.useSystemClipboard": true,
    "vim.hlsearch": true,
    "vim.handleKeys": {
-     "<C-a>": false
+      // All the keys that I don't want vim to handle.
+      "<C-a>": false, // Incrementing a number is almost always an accident for me.
+      "<C-p>": false, // I want VSCode to format my code for this shortcut.
    },
    "vim.insertModeKeyBindings": [
       {
@@ -20,7 +22,7 @@
         "before": ["Z", "Q"],
         "commands": [":q"]
       },
-      {
+      { /* somehow ; has to be the leader for this to work */
         "before": [";", "'"],
         "commands": ["workbench.action.quickOpen"]
       },
@@ -40,10 +42,13 @@
         "before": ["<C-p>"],
         "commands": [":tabN"]
       },
+      /* trying to make a shortcut to clear search context/highlights.
       {
         "before": ["/", "/"],
-        "commands": [":noh"]
+        "commands": ["search.action.clearSearchResults"],
+        "when": "hasSearchResult"
       }
+      */
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
       {
@@ -120,7 +125,7 @@
     "editor.folding": true,
     "editor.glyphMargin": true,
     "workbench.iconTheme": "vscode-icons",
-    "window.zoomLevel": 4,
+    "window.zoomLevel": 2,
     "editor.fontLigatures": true,
     "editor.fontFamily": "Fira Code",
     "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
@@ -130,7 +135,7 @@
     "workbench.colorCustomizations": {
       // Better Solarized Dark uses a way too bright red for the cursor.
       "[Better Solarized Dark]": {
-        "editorCursor.foreground": "#839496", 
+        "editorCursor.foreground": "#839496",
         "editorCursor.background": "#003541"
       }
     },
@@ -140,7 +145,12 @@
     "typescript.updateImportsOnFileMove.enabled": "always",
     "javascript.updateImportsOnFileMove.enabled": "always",
     "terminal.integrated.shell.osx": "/bin/zsh",
-    "workbench.editor.showTabs": false,
-    "files.autoSave": "afterDelay",
+    "workbench.editor.showTabs": true,
+    "files.autoSave": "off",
     "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "emmet.showSuggestionsAsSnippets": false,
+    "editor.tabSize": 2,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "emmet.showExpandedAbbreviation": "never",
 }
+

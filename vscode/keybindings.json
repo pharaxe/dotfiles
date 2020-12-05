@@ -32,14 +32,17 @@
         "command": "workbench.action.navigateDown"
     },
     // Prettier formating
+    /*
     {
-        "key": "shift+alt+f",
-        "command": "editor.action.formatDocument",
-        "when": "editorTextFocus & !editorHasSelection"
-    },
-    {
-        "key": "shift+alt+f",
+        "key": "ctrl+p",
         "command": "editor.action.formatSelection",
         "when": "editorTextFocus && editorHasSelection"
-    }
+    },
+    */
+    {
+        "key": "ctrl+p",
+        "command": "editor.action.formatDocument",
+        //"when": "editorTextFocus & !editorHasSelection"
+    },
 ]
+
