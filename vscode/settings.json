@@ -1,156 +1,187 @@
 {
-   "vim.leader": ";",
-   "vim.useSystemClipboard": true,
-   "vim.hlsearch": true,
-   "vim.handleKeys": {
-      // All the keys that I don't want vim to handle.
-      "<C-a>": false, // Incrementing a number is almost always an accident for me.
-      "<C-p>": false, // I want VSCode to format my code for this shortcut.
-   },
-   "vim.insertModeKeyBindings": [
-      {
-        "before": ["j", "j"],
-        "after": ["<Esc>"]
-      }
-    ],
-    "vim.normalModeKeyBindingsNonRecursive": [
-      {
-        "before": ["Z", "Z"],
-        "commands": [":wq"]
-      },
-      {
-        "before": ["Z", "Q"],
-        "commands": [":q"]
-      },
-      { /* somehow ; has to be the leader for this to work */
-        "before": [";", "'"],
-        "commands": ["workbench.action.quickOpen"]
-      },
-      {
-        "before": ["'", ";"],
-        "commands": ["workbench.action.closeActiveEditor"]
-      },
-      {
-        "before": ["<leader>", "d"],
-        "after": ["d", "d"]
-      },
-      {
-        "before": ["<C-n>"],
-        "commands": [":tabn"]
-      },
-      {
-        "before": ["<C-p>"],
-        "commands": [":tabN"]
-      },
-      /* trying to make a shortcut to clear search context/highlights.
+  "vim.leader": ";",
+  "vim.useSystemClipboard": true,
+  "vim.hlsearch": true,
+  "vim.handleKeys": {
+    // All the keys that I don't want vim to handle.
+    "<C-a>": false, // Incrementing a number is almost always an accident for me.
+    "<C-p>": false // I want VSCode to format my code for this shortcut.
+  },
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["Z", "Z"],
+      "commands": [":wq"]
+    },
+    {
+      "before": ["Z", "Q"],
+      "commands": [":q"]
+    },
+    {
+      /* somehow ; has to be the leader for this to work */
+      "before": [";", "'"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["'", ";"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["<leader>", "d"],
+      "after": ["d", "d"]
+    },
+    {
+      "before": ["<C-n>"],
+      "commands": [":tabn"]
+    },
+    {
+      "before": ["<C-p>"],
+      "commands": [":tabN"]
+    }
+    /* trying to make a shortcut to clear search context/highlights.
       {
         "before": ["/", "/"],
         "commands": ["search.action.clearSearchResults"],
         "when": "hasSearchResult"
       }
       */
-    ],
-    "vim.visualModeKeyBindingsNonRecursive": [
-      {
-        "before": [ "p", ],
-        "after": [ "p", "g", "v", "y" ]
-      },
-      {
-        "before": [ ">" ],
-        "commands": [ "editor.action.indentLines" ]
-      },
-      {
-        "before": [ "<" ],
-        "commands": [ "editor.action.outdentLines" ]
-      },
-    ],
-    "settings.cycle": [
-      {
-        "id": "statusBar",
-        "overrideWorkspaceSettings": true,
-        "values":[
-            {
-                "workbench.statusBar.visible": true
-            },
-            {
-                "workbench.statusBar.visible": false
-            }
-         ]
-      },
-      {
-        "id": "miniMap",
-        "overrideWorkspaceSettings": true,
-        "values":[
-            {
-                "editor.minimap.enabled": true
-            },
-            {
-                "editor.minimap.enabled": false
-            }
-         ]
-      },
-      {
-        "id": "lineNumbers",
-        "overrideWorkspaceSettings": false,
-        "values":[
-            {
-                "editor.lineNumbers": "off",
-                "editor.folding": false,
-                "editor.glyphMargin": false
-            },
-            {
-                "editor.lineNumbers": "on",
-                "editor.folding": true,
-                "editor.glyphMargin": true
-
-            }
-         ]
-      },
-      {
-        "id": "colorTheme",
-        "overrideWorkspaceSettings": false,
-        "values":[
-            {
-              "workbench.colorTheme": "Default Dark+"
-            },
-            {
-              "workbench.colorTheme": "Default Light+"
-            }
-         ]
-      }
-    ],
-    "editor.minimap.enabled": true,
-    "workbench.statusBar.visible": true,
-    "editor.lineNumbers": "on",
-    "editor.folding": true,
-    "editor.glyphMargin": true,
-    "workbench.iconTheme": "vscode-icons",
-    "window.zoomLevel": 2,
-    "editor.fontLigatures": true,
-    "editor.fontFamily": "Fira Code",
-    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
-    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
-    "workbench.editor.enablePreviewFromQuickOpen": false,
-    "workbench.colorTheme": "Better Solarized Dark",
-    "workbench.colorCustomizations": {
-      // Better Solarized Dark uses a way too bright red for the cursor.
-      "[Better Solarized Dark]": {
-        "editorCursor.foreground": "#839496",
-        "editorCursor.background": "#003541"
-      }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["p"],
+      "after": ["p", "g", "v", "y"]
     },
-    "editor.mouseWheelZoom": true,
-    "editor.accessibilitySupport": "off",
-    "vsicons.dontShowNewVersionMessage": true,
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "terminal.integrated.shell.osx": "/bin/zsh",
-    "workbench.editor.showTabs": true,
-    "files.autoSave": "off",
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "emmet.showSuggestionsAsSnippets": false,
-    "editor.tabSize": 2,
-    "diffEditor.ignoreTrimWhitespace": false,
-    "emmet.showExpandedAbbreviation": "never",
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
+    },
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
+    }
+  ],
+  "settings.cycle": [
+    {
+      "id": "statusBar",
+      "overrideWorkspaceSettings": true,
+      "values": [
+        {
+          "workbench.statusBar.visible": true
+        },
+        {
+          "workbench.statusBar.visible": false
+        }
+      ]
+    },
+    {
+      "id": "miniMap",
+      "overrideWorkspaceSettings": true,
+      "values": [
+        {
+          "editor.minimap.enabled": true
+        },
+        {
+          "editor.minimap.enabled": false
+        }
+      ]
+    },
+    {
+      "id": "lineNumbers",
+      "overrideWorkspaceSettings": false,
+      "values": [
+        {
+          "editor.lineNumbers": "off",
+          "editor.folding": false,
+          "editor.glyphMargin": false
+        },
+        {
+          "editor.lineNumbers": "on",
+          "editor.folding": true,
+          "editor.glyphMargin": true
+        }
+      ]
+    },
+    {
+      "id": "colorTheme",
+      "overrideWorkspaceSettings": false,
+      "values": [
+        {
+          "workbench.colorTheme": "Default Dark+"
+        },
+        {
+          "workbench.colorTheme": "Default Light+"
+        }
+      ]
+    }
+  ],
+  "editor.minimap.enabled": false,
+  "workbench.statusBar.visible": true,
+  "editor.lineNumbers": "on",
+  "editor.folding": true,
+  "editor.glyphMargin": true,
+  "workbench.iconTheme": "vscode-icons",
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "Fira Code",
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.colorTheme": "Better Solarized Dark",
+  "workbench.colorCustomizations": {
+    // Better Solarized Dark uses a way too bright red for the cursor.
+    "[Better Solarized Dark]": {
+      "editorCursor.foreground": "#839496",
+      "editorCursor.background": "#003541"
+    }
+  },
+  "editor.mouseWheelZoom": true,
+  "editor.accessibilitySupport": "off",
+  "vsicons.dontShowNewVersionMessage": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "workbench.editor.showTabs": true,
+  "files.autoSave": "off",
+  "editor.defaultFormatter": "ms-python.black-formatter",
+  "emmet.showSuggestionsAsSnippets": false,
+  "editor.tabSize": 8,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "hacksaw.gitlabToken": "6ELnnw6qY3gF7oNSqeXv",
+  "emmet.showExpandedAbbreviation": "never",
+  "gitlab.instanceUrl": "https://gitlab.internal.granular.ag/",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "editor.cursorStyle": "line",
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "editor.wordWrap": "off",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "gitlens.advanced.externalDiffTool": "vimdiff",
+  "window.zoomLevel": 3,
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.formatOnType": true
+  },
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "docker.dockerPath": "/usr/local/bin/docker",
+  "python.autoComplete.extraPaths": [
+    "app", 
+  ],
+  "python.defaultInterpreterPath": "/home/granular/.cache/pypoetry/virtualenvs/visor-api-9TtSrW0h-py3.9",
+  "python.analysis.extraPaths": [
+    "app"
+  ],
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.ignoreMissingGitWarning": true,
 }
-
