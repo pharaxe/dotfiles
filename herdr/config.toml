@@ -29,3 +29,12 @@ copy_mode = ["prefix+enter", "prefix+["]
 # C-a r: reload config (resize mode moves to C-a R)
 reload_config = "prefix+r"
 resize_mode = "prefix+shift+r"
+
+# match Tabby's Solarized Dark (default theme is catppuccin)
+[theme]
+name = "solarized"
+
+# sidebar divider is drawn in surface_dim; solarized sets it equal to the
+# background (#002b36), so it's invisible. base01 makes it a visible gray line.
+[theme.custom]
+surface_dim = "#586e75"
