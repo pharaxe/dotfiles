@@ -1,0 +1,31 @@
+onboarding = false
+# tmux-style keys, mirroring ~/.tmux.conf
+[ui]
+prompt_new_tab_name = false
+
+[keys]
+prefix = "ctrl+a"
+
+# C-a c / C-a C-c: new tab (tmux window)
+new_tab = ["prefix+c", "prefix+ctrl+c"]
+# C-a a: jump back (C-a C-a is reserved for a literal ctrl+a)
+last_pane = "prefix+a"
+# C-a C-n: next tab
+next_tab = ["prefix+n", "prefix+ctrl+n"]
+
+# splits: "-" side by side, "=" stacked (same as tmux.conf)
+split_vertical = ["prefix+minus", "prefix+v"]
+split_horizontal = "prefix+="
+
+# vi pane movement, with or without ctrl held
+focus_pane_left = ["prefix+h", "prefix+ctrl+h"]
+focus_pane_down = ["prefix+j", "prefix+ctrl+j"]
+focus_pane_up = ["prefix+k", "prefix+ctrl+k"]
+focus_pane_right = ["prefix+l", "prefix+ctrl+l"]
+
+# C-a Enter: copy mode
+copy_mode = ["prefix+enter", "prefix+["]
+
+# C-a r: reload config (resize mode moves to C-a R)
+reload_config = "prefix+r"
+resize_mode = "prefix+shift+r"
